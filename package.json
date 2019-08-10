@@ -1,0 +1,19 @@
+{
+  "name": "jojoapp",
+  "version": "1.0.0",
+  "description": "My scrumtrulescent Nuxt.js project",
+  "author": "rayzamgh",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --hostname localhost --port 3333",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "evernote": "^2.0.5",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
