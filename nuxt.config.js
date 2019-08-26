@@ -48,5 +48,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    base: '/portfolioVue/'
   }
 }

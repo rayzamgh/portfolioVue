@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "nuxt --hostname localhost --port 3333",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start": "nuxt start -p 3333",
+    "generate": "nuxt generate",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
     "axios": "^0.19.0",
