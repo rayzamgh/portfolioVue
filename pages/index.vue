@@ -19,10 +19,11 @@
           </div>
         </header>
 
+<!-- Mail -->
         <div>
          <div style="position:absolute; top:2vh">
-          <button @click="buttonPressedShowForm()" class="button" style="vertical-align:middle">
-              <span>
+          <button @click="buttonPressedShowForm()" class="button" style="vertical-align:middle; width:15vw">
+              <span style="font-size:calc(12px + 1vw)">
               Query me a message:
               </span>
             </button>
@@ -56,37 +57,41 @@
             </button>
           </form>
         </div>
-
-        <!-- button hover bawah -->
+      <button id="secondaryYtDisplay">
+        <iframe width="160" height="120"
+          :src="linkyt" allow="autoplay; encrypted-media" allowfullscreen >
+        </iframe>
+      </button>
+<!-- button hover bawah -->
         <div class="clumpbot w3-row" style="width: 100%; height: 100vh;">
           <div class="w3-quarter" style="z-index:1;">
-              <button class="buttonup" style="left: 0%;">
-                <div>
+              <button id="about" class="buttonup" style="left: 0%; width:calc(5vh+10vw)">
+                <div style="font-size:calc(10px + 0.5vw)">
                   About Me
                   <br>
-                  <img style="height:10vh; width:10vh;" src="../assets/jojo.jpg">
+                  <img id="profpic" style="height:10vh; width:10vh;" src="../assets/jojo.jpg">
                   <br>
                   <br>
-                  <div style="font-size:14px;">
-                    Rayza Mahendra G H 
+                  <div style="font-size:calc(8px + 0.5vw);">
+                    Rayza Mahendra G H
+                    <br>
+                    Informatics Undergraduate ITB 
                   </div>
-                  <br>
-                  Informatics Undergraduate ITB
                 </div>
               </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-              <button class="buttonup" style="left: 25%;">
+              <button id="displayyt" class="buttonup" style="left: 25%;">
                 <div>
                   Extra Pepega
-                  <iframe width="150" height="200"
+                  <iframe width="200" height="200"
                   :src="linkyt" allow="autoplay; encrypted-media" allowfullscreen >
                   </iframe>
                 </div>
               </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button class="buttonup" style="right:2%" >
+            <button id="contactb" class="buttonup" style="right:2%" >
               <div>
                 Contact
                 <br>
@@ -106,14 +111,14 @@
             </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button class="buttonupquery" style="right: 25%;">
+            <button id="queryb" class="buttonupquery" style="right: 25%;">
               <div>
                 Query Youtube:
                 <input
                   style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent; "
                   v-model = "queryYt"
                   @keypress="checkEnter($event)">
-                  <button style="position: relative; width:10px; height 10px;" class="button" @click="buttonPressedYoutube()">
+                  <button id="searchb" class="button" @click="buttonPressedYoutube()">
                     Search
                   </button>
               </div>
@@ -139,6 +144,14 @@ export default {
             linkyt: ''
         }
     },
+    // mounted() {
+    //   alert("omeganice") // I'm text inside the component.
+    // },
+    mounted(){
+      this.changeFontSize()
+    },
+
+    
     watch: {
       modalOpen: function (isOpen) {
         if (isOpen) {
@@ -150,7 +163,26 @@ export default {
       }
     },
     methods: {
-
+      async changeFontSize(){
+        var result = await this.detectScreenWidth();
+        if (result) {
+          console.log(screen.width)
+        }else{
+          console.log(screen.width)
+        }
+        return(result)
+      },
+      detectScreenWidth(){
+        var pepeg = false
+        if(screen.width < 600){
+          pepeg = true
+        }
+          return new Promise(resolve => {
+          setTimeout(() => {
+            resolve(pepeg);
+          }, 2000);
+        });
+      },
       buttonPressedShowForm() {
         this.show = !this.show
       },
@@ -183,6 +215,43 @@ export default {
 #centered {
   text-align: center;
 }
+@media only screen and (max-width: 600px) {
+  #about div img{
+    height: 30px ! important;
+    width: 30px ! important;
+  }
+
+   #queryb{
+     right: 40% ! important;
+     width: 100px;
+   }
+
+  #searchb{
+     font-size: 10px; 
+  }
+
+  #contactb{
+    width: 100px ! important; 
+  }
+
+  #displayyt{
+    visibility: hidden;
+  }
+
+  #secondaryYtDisplay:hover{
+    transition: 1s;
+    opacity: 1;
+  }
+
+  .buttonup div {
+    font-size:10px;
+  }
+
+  .buttonupquery div {
+    font-size:10px;
+  }
+}
+
 .clumpbot{
   position: absolute;
   top: 94vh;
@@ -294,5 +363,23 @@ html, body {
 }
 .buttonupquery:hover{
   transform: translateY(-10vh)
+}
+#searchb {
+  position: relative; 
+  width:150px; 
+  height: 50px;
+}
+#contactb {
+  width: 200px;
+}
+#secondaryYtDisplay{
+  position: fixed;
+  height: 120px;
+  width: 150px;
+  right: 0%;
+  top: 0vh;
+  opacity: 0;
+  border-color: transparent;
+  background-color: transparent; 
 }
 </style>
