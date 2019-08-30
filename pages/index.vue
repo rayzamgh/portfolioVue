@@ -1,6 +1,6 @@
 <template>
-<div >
-  <div class="w3-display-container" style="background-position: center;">
+<div>
+  <div>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -63,9 +63,9 @@
         </iframe>
       </button>
 <!-- button hover bawah -->
-        <div class="clumpbot w3-row" style="width: 100%; height: 100vh;">
-          <div class="w3-quarter" style="z-index:1;">
-              <button id="about" class="buttonup" style="left: 0%; width:calc(5vh+10vw)">
+        <div style="width: 100%; height: 50vh; bottom: 2vh; overflow:hidden; position: absolute">
+          <div class="w3-quarter" style="z-index:1; width:calc(5vh+10vw); overflow:hidden;">
+              <button id="about" class="buttonup" style="left: 0%;top:40vh; width:calc(5vh+10vw)">
                 <div style="font-size:calc(10px + 0.5vw)">
                   About Me
                   <br>
@@ -81,7 +81,7 @@
               </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-              <button id="displayyt" class="buttonup" style="left: 25%;">
+              <button id="displayyt" class="buttonup" style="left: 25%;top:40vh;">
                 <div>
                   Extra Pepega
                   <iframe width="200" height="200"
@@ -91,7 +91,7 @@
               </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button id="contactb" class="buttonup" style="right:2%" >
+            <button id="contactb" class="buttonup" style="right:2%;top:40vh;" >
               <div>
                 Contact
                 <br>
@@ -111,7 +111,7 @@
             </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button id="queryb" class="buttonupquery" style="right: 25%;">
+            <button id="queryb" class="buttonupquery" style="right: 25%;top:40vh;">
               <div>
                 Query Youtube:
                 <input
@@ -127,7 +127,7 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 </template>
 <script>
 import axios from 'axios'
