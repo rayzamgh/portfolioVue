@@ -6,12 +6,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">    
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
+        <title>BWSong' Personal Page</title>
        
 
-        <header style="background-position: center;" class="w3-display-container w3-wide bgimg" id="home">
+        <header style="background-position: center; overflow: hidden;" class="w3-display-container w3-wide bgimg" id="home">
           <div class="w3-display-middle w3-text-white w3-center">
             <h1 class="w3-jumbo">Rayza Mahendra</h1>
             <h2>Software Engineer in Training</h2>
@@ -20,9 +22,38 @@
         </header>
 
 <!-- Mail -->
+          <div class="container" style="position:absolute; top:0vh">
+            <div class="block" style="width:99vw">
+              <nav class="nav">
+                <div class="nav-left">
+                    <img src="../assets/pepeJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
+                    <img src="../assets/pokiJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
+                </div>
+
+                <div class="nav-center">
+                  <a href="https://github.com/rayzamgh" class="nav-item">
+                    <span class="icon">
+                      <i class="fa fa-github"></i>
+                    </span>
+                  </a>
+                  <a href="https://gitlab.com/rayzamgh" class="nav-item">
+                    <span class="icon">
+                      <i class="fa fa-gitlab"></i>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="nav-right nav-menu">
+                  <nuxt-link to="/" class="nav-item">Home</nuxt-link>
+                  <nuxt-link to="/profile" class="nav-item">About Me</nuxt-link>
+                  <a href="#" class="nav-item">Contact</a>
+                </div>
+              </nav>
+            </div>
+          </div>
         <div>
-         <div style="position:absolute; top:2vh">
-          <button @click="buttonPressedShowForm()" class="button" style="vertical-align:middle; width:15vw">
+         <div style="position:absolute; top:5vh">
+          <button @click="buttonPressedShowForm()" class="buttonself" style="vertical-align:middle; width:15vw">
               <span style="font-size:calc(12px + 1vw)">
               Query me a message:
               </span>
@@ -50,7 +81,7 @@
             <div class="status">
 
             </div>
-            <button type="submit" class="button">
+            <button type="submit" class="buttonself">
               <span>
                 Send
               </span>
@@ -63,25 +94,26 @@
         </iframe>
       </button>
 <!-- button hover bawah -->
-        <div style="width: 100%; height: 50vh; bottom: 2vh; overflow:hidden; position: absolute">
+        <div style="width: 100%; height: 50vh; bottom: 0vh; overflow:hidden; position: absolute">
           <div class="w3-quarter" style="z-index:1; width:calc(5vh+10vw); overflow:hidden;">
-              <button id="about" class="buttonup" style="left: 0%;top:40vh; width:calc(5vh+10vw)">
+              <button id="about" class="buttonup" style="left: 0%;top:40vh; width:calc(5vh+10vw); overflow:hidden;">
                 <div style="font-size:calc(10px + 0.5vw)">
                   About Me
                   <br>
                   <img id="profpic" style="height:10vh; width:10vh;" src="../assets/jojo.jpg">
                   <br>
                   <br>
-                  <div style="font-size:calc(8px + 0.5vw);">
+                  <div style="font-size:calc(7px + 0.5vw);">
                     Rayza Mahendra G H
                     <br>
                     Informatics Undergraduate ITB 
                   </div>
+                  <nuxt-link to="/profile">more..</nuxt-link>
                 </div>
               </button>
           </div>
-          <div class="w3-quarter" style=" z-index:1;">
-              <button id="displayyt" class="buttonup" style="left: 25%;top:40vh;">
+          <div class="w3-quarter" style=" z-index:1; width:200px;">
+              <button id="displayyt" class="buttonup" style="left: 25%;width:200px;top:40vh;overflow:hidden;">
                 <div>
                   Extra Pepega
                   <iframe width="200" height="200"
@@ -91,7 +123,7 @@
               </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button id="contactb" class="buttonup" style="right:2%;top:40vh;" >
+            <button id="contactb" class="buttonup" style="right:2%;top:40vh;overflow:hidden;" >
               <div>
                 Contact
                 <br>
@@ -118,7 +150,7 @@
                   style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent; "
                   v-model = "queryYt"
                   @keypress="checkEnter($event)">
-                  <button id="searchb" class="button" @click="buttonPressedYoutube()">
+                  <button id="searchb" class="buttonself" @click="buttonPressedYoutube()">
                     Search
                   </button>
               </div>
@@ -149,6 +181,7 @@ export default {
     // },
     mounted(){
       this.changeFontSize()
+      this.checkHorizontalOverflow()
     },
 
     
@@ -191,6 +224,17 @@ export default {
           this.buttonPressedYoutube()
         }
       },
+      checkHorizontalOverflow(){
+      var docHeight = document.documentElement.offsetHeight;
+
+      [].forEach.call(
+        document.querySelectorAll('*'),
+        function(el) {
+          if (el.offsetHeight > docHeight) {
+            console.log(el);
+          }
+        }
+      )},
       buttonPressedYoutube() {
         this.linkyt = 'https://www.youtube.com/embed?listType=search&list=' + this.queryYt
       },
@@ -288,7 +332,7 @@ p {line-height: 2}
   background-image: url("../assets/omegapepeg.jpg")
 }
 .bgimg2 {background-image: url("https://pm1.narvii.com/5910/22d0b5e1d282837e1d3b68bbd5beddb51bb1c730_hq.jpg")}
-.button {
+.buttonself {
   display: inline-block;
   border-radius: 3px;
   background-color: transparent;
@@ -302,13 +346,13 @@ p {line-height: 2}
   cursor: pointer;
   margin: 5px;
 }
-.button span {
+.buttonself span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.button span:after {
+.buttonself span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -316,10 +360,10 @@ p {line-height: 2}
   right: -20px;
   transition: 0.5s;
 }
-.button:hover span {
+.buttonself:hover span {
   padding-right: 25px;
 }
-.button:hover span:after {
+.buttonself:hover span:after {
   opacity: 1;
   right: 0;
 }
