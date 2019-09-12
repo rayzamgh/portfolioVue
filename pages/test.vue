@@ -1,0 +1,53 @@
+<template>
+<div>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    <nuxt-link to="/">Home</nuxt-link>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+    pepega <br>
+</div>
+</template>

@@ -23,14 +23,13 @@
 
 <!-- Mail -->
           <div class="container" style="position:absolute; top:0vh">
-            <div class="block" style="width:99vw">
+            <div id="mainbar" class="block" style="width:99vw">
               <nav class="nav">
                 <div class="nav-left">
                     <img src="../assets/pepeJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
                     <img src="../assets/pokiJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
                 </div>
-
-                <div class="nav-center">
+                 <div class="nav-center">
                   <a href="https://github.com/rayzamgh" class="nav-item">
                     <span class="icon">
                       <i class="fa fa-github"></i>
@@ -41,11 +40,16 @@
                       <i class="fa fa-gitlab"></i>
                     </span>
                   </a>
+                  <a href="https://www.linkedin.com/in/rayza-mahendra-9a1595162" class="nav-item">
+                    <span class="icon">
+                      <i class="fa fa-linkedin"></i>
+                    </span>
+                  </a>
                 </div>
 
                 <div class="nav-right nav-menu">
-                  <nuxt-link to="/" class="nav-item">Home</nuxt-link>
-                  <nuxt-link to="/profile" class="nav-item">About Me</nuxt-link>
+                  <router-link to="/" class="nav-item">Home</router-link>
+                  <router-link to="/profile" class="nav-item">About Me</router-link>
                   <a href="#" class="nav-item">Contact</a>
                 </div>
               </nav>
@@ -58,7 +62,6 @@
               Query me a message:
               </span>
             </button>
-          
           <form action="https://formspree.io/rayzaganteng@gmail.com" style="position:relative; color: white;" method="POST" v-if="show">
             <label>
               Email
@@ -115,7 +118,7 @@
           <div class="w3-quarter" style=" z-index:1; width:200px;">
               <button id="displayyt" class="buttonup" style="left: 25%;width:200px;top:40vh;overflow:hidden;">
                 <div>
-                  Extra Pepega
+                  Youtube Display
                   <iframe width="200" height="200"
                   :src="linkyt" allow="autoplay; encrypted-media" allowfullscreen >
                   </iframe>
@@ -139,15 +142,19 @@
                 <br>
                 <a href="https://github.com/rayzamgh" target="_blank">rayzamgh</a>
                 <br>
+                <i class="fa fa-linkedin"></i>
+                <br>
+                <a href="https://www.linkedin.com/in/rayza-mahendra-9a1595162" target="_blank">Rayza Mahendra</a>
+                <br>
               </div>
             </button>
           </div>
           <div class="w3-quarter" style=" z-index:1;">
-            <button id="queryb" class="buttonupquery" style="right: 25%;top:40vh;">
+            <button id="queryb" class="buttonupquery" style="right: 25%;top:40vh;width:13vw;">
               <div>
-                Query Youtube:
+                Youtube Search:
                 <input
-                  style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent; "
+                  style="width:calc(50px + 8vw); padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent; "
                   v-model = "queryYt"
                   @keypress="checkEnter($event)">
                   <button id="searchb" class="buttonself" @click="buttonPressedYoutube()">
@@ -163,6 +170,10 @@
 </template>
 <script>
 import axios from 'axios'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 
 export default {
     data () {
@@ -176,12 +187,10 @@ export default {
             linkyt: ''
         }
     },
-    // mounted() {
-    //   alert("omeganice") // I'm text inside the component.
-    // },
     mounted(){
       this.changeFontSize()
       this.checkHorizontalOverflow()
+      document.title = "My Portfolio Webpage"
     },
 
     
@@ -236,7 +245,10 @@ export default {
         }
       )},
       buttonPressedYoutube() {
-        this.linkyt = 'https://www.youtube.com/embed?listType=search&list=' + this.queryYt
+        this.linkyt = 'https://www.youtube.com/embed?listType=search&list=' + this.queryYt;
+        if(window.innerWidth < 600){
+          document.getElementById("secondaryYtDisplay").style.opacity = 1;
+        }
       },
       buttonPressedYoutubeManual() {
         let query = this.queryYt.split(' ').join('+')
@@ -285,6 +297,10 @@ export default {
   #secondaryYtDisplay:hover{
     transition: 1s;
     opacity: 1;
+  }
+
+  #mainbar{
+    width:100vw ! important;
   }
 
   .buttonup div {
@@ -367,9 +383,6 @@ p {line-height: 2}
   opacity: 1;
   right: 0;
 }
-html, body {
-  overflow: hidden;
-}
 .buttonup {
   transition: 1s;
   position: absolute;
@@ -410,7 +423,7 @@ html, body {
 }
 #searchb {
   position: relative; 
-  width:150px; 
+  width:calc(50px + 8vw);
   height: 50px;
 }
 #contactb {
@@ -420,8 +433,8 @@ html, body {
   position: fixed;
   height: 120px;
   width: 150px;
-  right: 0%;
-  top: 0vh;
+  right: 7%;
+  top: 8vh;
   opacity: 0;
   border-color: transparent;
   background-color: transparent; 

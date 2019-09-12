@@ -5,17 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
-        <title>Profile</title>
-
-        <div id="maincontainer">
-            <div class="block" >
-                    <nav class="nav">
-                        <div class="nav-left">
-                            <img src="../assets/pepeJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
-                            <img src="../assets/pokiJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
+        
+        <div class="container">
+            <div>
+            <div class="navbar">
+                        <div class="navbar-left">
+                            <!-- <img src="../assets/pepeJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto">
+                            <img src="../assets/pokiJAM.gif" style="width:2rem; height:2rem; margin-top:auto; margin-bottom:auto"> -->
                         </div>
 
-                        <div class="nav-center">
+                        <div class="navbar-center">
                         <a href="https://github.com/rayzamgh" class="nav-item">
                             <span class="icon">
                             <i class="fa fa-github"></i>
@@ -28,12 +27,12 @@
                         </a>
                         </div>
 
-                        <div class="nav-right nav-menu">
-                        <nuxt-link to="/" class="nav-item">Home</nuxt-link>
-                        <nuxt-link to="/profile" class="nav-item">About Me</nuxt-link>
+                        <div class="navbar-right nav-menu">
+                        <router-link to="/" class="nav-item">Home</router-link>
+                        <router-link to="/profile" class="nav-item">About Me</router-link>
                         <a href="#" class="nav-item">Contact</a>
                         </div>
-                    </nav>
+                    </div>
             </div>
             <div id="subcontainer" class="container">
                 <br><br>
@@ -49,10 +48,55 @@
                         <br>
                         <article class="message">
                             <div class="message-header">
-                                <p>About Us</p>
+                                <p>About Me</p>
                             </div>
                             <div class="message-body">
-                            I'm a computer science undergraduate at ITB. 
+                            I'm a computer science undergraduate at ITB.
+                            <br>
+                            Familiar with the following programming language:
+                            <br>
+                            C, C++, Java, Python, Go, ahen!Haskell, C#, HTML, CSS, Javascript
+￼
+                            </div>
+                        </article>
+                        <article clasis-fixed-tops="message">
+                            <div class="message-header">
+                                <p>Projects I've Worked On</p>
+                            </div>
+                            <div class="message-body">
+                                <h1 style="font-size:20px">Well Depth Pressure Projection</h1>
+                                <br>
+                                A side project, commissioned by a fellow from Geothermal Engineering Master Degree
+                                Student. Projecting well pressure and temperature at different depth with IAPWS Steam
+                                Table, Developed with Python
+                            </div>
+                            <div class="message-body">
+                                <h1 style="font-size:20px">3DTransformation API</h1>
+                                <br>
+                                
+                                2D & 3D Geometrical transformation app. Developed with OpenGL, Python
+                            </div>
+                            <div class="message-body">
+                                <h1 style="font-size:20px">Engi's Farm</h1>
+                                <br>
+                                
+                                2.5D Harvest-moon-like game, developed using java
+                            </div>
+                        </article>
+                        <br>
+                        <article clasis-fixed-tops="message">
+                            <div class="message-header">
+                                <p>Work Experience</p>
+                            </div>
+                            <div class="message-body">
+                                <h1 style="font-size:20px">Roketin</h1>
+                                <img src="../assets/roketin.jpg">
+                                <br>
+                                <h2 style="font-family: cursive; font-size: 22px">Web Application Back-End Developer 
+                                </h2>
+                                Handling Back-End related works (Database,
+                                 REST API, JWT Login) on a core 
+                                 WebApplication for an insurance company, Developed Golang, MongoDB
                             </div>
                         </article>
                     </div>
@@ -62,21 +106,27 @@
     </div>
 </template>
 <script>
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
 export default {
-    
+    components:{
+    },
+    methods: {
+    }
 }
 </script>
 <style>
-#maincontainer{
-    background-image: url("../assets/omegapepeg.jpg");
-    width: 100%;
-    height: 100vh;
-    background-position:inherit;
-    overflow: hidden;
-}
 #koni{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.navbar{
+    width: 100%;
+    text-align: center;
+    position: relative;
 }
 </style>
