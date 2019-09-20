@@ -111,7 +111,7 @@
                     <br>
                     Informatics Undergraduate ITB 
                   </div>
-                  <nuxt-link to="/profile">more..</nuxt-link>
+                  <nuxt-link to="/profile" style="color:black">more..</nuxt-link>
                 </div>
               </button>
           </div>
