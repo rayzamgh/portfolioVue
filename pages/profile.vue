@@ -90,7 +90,7 @@
                             </div>
                             <br>
                             <div class="message-body">
-                                <a href="wearblackindonesia.com">Wearblack Indonesia</a>
+                                <a href="http://www.wearblackindonesia.com/">Wearblack Indonesia</a>
                                 <br>
                                 <br>
                                 September 2019
