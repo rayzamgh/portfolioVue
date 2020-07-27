@@ -91,7 +91,7 @@
               Email
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
                 type="email"
                 name="email"
                 class="email"
@@ -103,7 +103,7 @@
               Subject
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
                 type="text"
                 name="subject"
                 class="subject"
@@ -115,7 +115,7 @@
               Message
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
                 name="message"
                 class="message"
                 v-model="message"
