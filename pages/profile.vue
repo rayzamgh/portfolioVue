@@ -47,7 +47,7 @@
           <br />
           <div class="box">
             <p
-              style="text-align:center;font-family: fantasy;font-size:30px;"
+              style="text-align:center;font-family: Tahoma;font-size:30px;"
             >Looking for a developer for your newest web app?</p>
             <br />
             <article class="message">
@@ -138,7 +138,7 @@
                 <h1 style="font-family: Tahoma;font-size:40px">Roketin</h1>
                 <img src="../assets/roketin.jpg" />
                 <br />
-                <h2 style="font-family: cursive; font-size: 22px">Intern Back-End Developer</h2>May 2019 - July 2019
+                <h2 style="font-family: Tahoma; font-size: 22px">Intern Back-End Developer</h2>May 2019 - July 2019
                 <br />
                 <br />Handling Back-End related works (Database,
                 REST API, JWT Login) on a core
@@ -148,7 +148,7 @@
                 <h1 style="font-size:40px">Xtremax Teknologi Indonesia</h1>
                 <img src="../assets/xtremax.png" style="width:30%;" />
                 <br />
-                <h2 style="font-family: cursive; font-size: 22px">Part Time Back-End Developer</h2>February 2020 - Present
+                <h2 style="font-family: Tahoma; font-size: 22px">Part Time Back-End Developer</h2>February 2020 - November 2020
                 <br />
                 <br />Developing various CMS based webapp with ASP.NET and Sitecore MVC. Managing servers and Zookeeper instances, for Solr search function optimization with Docker.
               </div>
@@ -164,7 +164,7 @@
                       <h1 style="font-size:20px">HMIF ITB</h1>
                       <img src="../assets/hmif.png" style="width 100px; height: 100px" />
                       <br />
-                      <h2 style="font-family: cursive; font-size: 14px">Kinship Division Staff</h2>
+                      <h2 style="font-family: Tahoma; font-size: 14px">Kinship Division Staff</h2>
                       <br />May 2018 - February 2020
                       <br />
                     </div>
@@ -174,8 +174,8 @@
                       <h1 style="font-size:20px">HMIF ITB</h1>
                       <img src="../assets/hmif.png" style="width 100px; height: 100px" />
                       <br />
-                      <h2 style="font-family: cursive; font-size: 14px">Head of Kinship Division</h2>
-                      <br />Maret 2020 - Present
+                      <h2 style="font-family: Tahoma; font-size: 14px">Head of Kinship Division</h2>
+                      <br />March 2020 - Present
                       <br />
                     </div>
                   </div>
@@ -185,9 +185,9 @@
                       <img src="../assets/gen.png" style="width 100px; height: 100px" />
                       <br />
                       <h2
-                        style="font-family: cursive; font-size: 14px"
+                        style="font-family: Tahoma; font-size: 14px"
                       >Vice Chief of Music Creative Division</h2>
-                      <br />September 2018 - August 2019
+                      September 2018 - August 2019 
                       <br />
                     </div>
                   </div>
@@ -197,7 +197,7 @@
                       <img src="../assets/arkav.png" style="width 100px; height: 100px" />
                       <br />
                       <h2
-                        style="font-family: cursive; font-size: 14px"
+                        style="font-family: Tahoma; font-size: 14px"
                       >Logistician and Datavidia Staff</h2>
                       <br />September 2018 & September 2019
                       <br />

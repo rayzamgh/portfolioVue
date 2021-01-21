@@ -47,6 +47,11 @@
               />
             </div>
             <div class="nav-center">
+              <a href="../profile" class="nav-item">
+                <span class="icon">
+                  <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+                </span>
+              </a>
               <a href="https://github.com/rayzamgh" class="nav-item">
                 <span class="icon">
                   <i class="fa fa-github"></i>
@@ -62,6 +67,7 @@
                   <i class="fa fa-linkedin"></i>
                 </span>
               </a>
+              
             </div>
 
             <div class="nav-right nav-menu">
@@ -77,21 +83,21 @@
           <button
             @click="buttonPressedShowForm()"
             class="buttonself"
-            style="vertical-align:middle; width:15vw"
+            style="vertical-align:middle;"
           >
-            <span style="font-size:calc(12px + 1vw); color: black;">Query me a message:</span>
+            <span style="font-size:calc(8px + 0.5vw); color: black;">Message Me : <br> or email directly to <b style="font-weight: bold;"> rayzamgh@gmail.com</b></span>
           </button>
           <form
-            action="https://formspree.io/rayzaganteng@gmail.com"
+            action="https://pormspree.io/rayzaganteng@gmail.com"
             style="position:relative; color: black; text-align:center;"
             method="POST"
             v-if="show"
           >
             <label>
-              Email
+              Your Email
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent; width:90%;"
                 type="email"
                 name="email"
                 class="email"
@@ -103,7 +109,7 @@
               Subject
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;width:90%;"
                 type="text"
                 name="subject"
                 class="subject"
@@ -115,7 +121,7 @@
               Message
               <br />
               <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;"
+                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;width:90%;"
                 name="message"
                 class="message"
                 v-model="message"
@@ -138,7 +144,7 @@
           ></iframe>
         </button>
         <!-- button hover bawah -->
-        <div style="width: 100%; height: 50vh; bottom: 0vh; overflow:hidden; position: absolute">
+        <!-- <div style="width: 100%; height: 50vh; bottom: 0vh; overflow:hidden; position: absolute">
           <div class="w3-quarter" style="z-index:1; width:calc(5vh+10vw); overflow:hidden;">
             <button
               id="about"
@@ -218,7 +224,7 @@
               </div>
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -423,8 +429,8 @@ p {
   color: #ffffff;
   text-align: center;
   font-size: 18px;
+  width:90%;
   padding: 20px;
-  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -509,5 +515,12 @@ p {
 #queryButton {
   background-color: white;
   border-radius: 0px 0px 20px 0px;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  #queryButton {
+    width: 50vw;
+  }
 }
 </style>
