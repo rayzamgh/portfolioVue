@@ -1,6 +1,6 @@
-# jojoapp
+# Personal Web Portfolio at www.rayzamahendra.xyz
 
-> My scrumtrulescent Nuxt.js project
+> Made with Nuxt JS and Vue
 
 ## Build Setup
 
