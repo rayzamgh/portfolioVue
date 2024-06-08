@@ -1,0 +1,30 @@
+name: Deploy Nuxt.js app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Set this to the branch from which you want to deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # You can specify your Node.js version here
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build and Generate static files
+        run: npm run generate:gh-pages
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
