@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{298:function(o,n){window.onscroll=function(){window.pageYOffset>c?header.classList.add("sticky"):header.classList.remove("sticky")};var header=document.getElementById("navblock"),c=header.offsetTop}}]);
