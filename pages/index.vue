@@ -25,9 +25,9 @@
       >
         <div class="w3-display-middle w3-text-white w3-center">
           <h1 class="w3-jumbo">Rayza Mahendra</h1>
-          <h2>Software Engineer in Training</h2>
+          <h2>Machine Learning Engineer</h2>
           <h2>
-            <b>09.07.2019</b>
+            <b>06.08.2024</b>
           </h2>
         </div>
       </header>
@@ -79,61 +79,6 @@
         </div>
       </div>
       <div>
-        <div id="queryButton" style="position:absolute; top:5vh">
-          <button
-            @click="buttonPressedShowForm()"
-            class="buttonself"
-            style="vertical-align:middle;"
-          >
-            <span style="font-size:calc(8px + 0.5vw); color: black;">Message Me : <br> or email directly to <b style="font-weight: bold;"> rayzamgh@gmail.com</b></span>
-          </button>
-          <form
-            action="https://pormspree.io/rayzaganteng@gmail.com"
-            style="position:relative; color: black; text-align:center;"
-            method="POST"
-            v-if="show"
-          >
-            <label>
-              Your Email
-              <br />
-              <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent; width:90%;"
-                type="email"
-                name="email"
-                class="email"
-                v-model="email"
-              />
-            </label>
-            <br />
-            <label>
-              Subject
-              <br />
-              <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;width:90%;"
-                type="text"
-                name="subject"
-                class="subject"
-                v-model="subject"
-              />
-            </label>
-            <br />
-            <label>
-              Message
-              <br />
-              <input
-                style="padding: 3px 0 2px 10px; color:black; border-radius: 20px; background-color:transparent;width:90%;"
-                name="message"
-                class="message"
-                v-model="message"
-              />
-            </label>
-            <br />
-            <div class="status"></div>
-            <button type="submit" class="buttonself" style="text-align:center; color:black">
-              <span>Send</span>
-            </button>
-          </form>
-        </div>
         <button id="secondaryYtDisplay">
           <iframe
             width="160"
@@ -143,88 +88,6 @@
             allowfullscreen
           ></iframe>
         </button>
-        <!-- button hover bawah -->
-        <!-- <div style="width: 100%; height: 50vh; bottom: 0vh; overflow:hidden; position: absolute">
-          <div class="w3-quarter" style="z-index:1; width:calc(5vh+10vw); overflow:hidden;">
-            <button
-              id="about"
-              class="buttonup"
-              style="left: 0%;top:40vh; width:calc(5vh+10vw); overflow:hidden;"
-            >
-              <div style="font-size:calc(10px + 0.5vw)">
-                About Me
-                <br />
-                <img id="profpic" style="height:10vh; width:10vh;" src="../assets/jojo.jpg" />
-                <br />
-                <br />
-                <div style="font-size:calc(7px + 0.5vw);">
-                  Rayza Mahendra G H
-                  <br />Informatics Undergraduate ITB
-                </div>
-                <nuxt-link to="/profile" style="color:black">more..</nuxt-link>
-              </div>
-            </button>
-          </div>
-          <div class="w3-quarter" style=" z-index:1; width:200px;">
-            <button
-              id="displayyt"
-              class="buttonup"
-              style="left: 25%;width:200px;top:40vh;overflow:hidden;"
-            >
-              <div>
-                Youtube Display
-                <iframe
-                  width="200"
-                  height="200"
-                  :src="linkyt"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </button>
-          </div>
-          <div class="w3-quarter" style=" z-index:1;">
-            <button id="contactb" class="buttonup" style="right:2%;top:40vh;overflow:hidden;">
-              <div>
-                Contact
-                <br />
-                <br />
-                <img src="../assets/gmail.png" style="width:4vh; height:2vh;" />
-                <br />
-                <a href>rayzamgh@gmail.com</a>
-                <br />
-                <img src="../assets/gitlab.png" style="width:4vh; height:4vh;" />
-                <br />
-                <a href="https://gitlab.com/rayzamgh" target="_blank">rayzamgh</a>
-                <br />
-                <img src="../assets/github.png" style="width:4vh; height:4vh;" />
-                <br />
-                <a href="https://github.com/rayzamgh" target="_blank">rayzamgh</a>
-                <br />
-                <i class="fa fa-linkedin"></i>
-                <br />
-                <a
-                  href="https://www.linkedin.com/in/rayza-mahendra-9a1595162"
-                  target="_blank"
-                >Rayza Mahendra</a>
-                <br />
-              </div>
-            </button>
-          </div>
-          <div class="w3-quarter" style=" z-index:1;">
-            <button id="queryb" class="buttonupquery" style="right: 25%;top:40vh;width:13vw;">
-              <div>
-                Youtube Search:
-                <input
-                  style="width:calc(50px + 8vw); padding: 3px 0 2px 10px; color:white; border-radius: 20px; background-color:transparent; "
-                  v-model="queryYt"
-                  @keypress="checkEnter($event)"
-                />
-                <button id="searchb" class="buttonself" @click="buttonPressedYoutube()">Search</button>
-              </div>
-            </button>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

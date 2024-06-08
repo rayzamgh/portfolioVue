@@ -42,28 +42,49 @@
         <br />
         <div class="title" style="text-align: center; font-size: 5em; color: black">Hi. I'm Mahen!</div>
         <div class="block">
-          <img id="koni" src="../assets/koni.jpg" />
+          <img id="koni" src="../assets/koni.jpg" style="width: 30%;"/>
           <br />
           <br />
           <div class="box">
-            <p
-              style="text-align:center;font-family: Tahoma;font-size:30px;"
-            >Looking for a developer for your newest web app?</p>
             <br />
             <article class="message">
               <div class="message-header">
                 <p>About Me</p>
               </div>
               <div class="message-body" style="text-align: center">
-                I'm a penultimate year student from Informatics Engineering at ITB.
-                <br />
-                <br />Familiar with the following programming language:
-                <br />C#, C++, Java, Python, Go, Haskell, C#, HTML, CSS, Javascript, SQL, NoSQL
-                <br />
-                <br />Have experience with frameworks below:
-                <br />ASP.NET, Sitecore, Go-chi, Express.js, React, Vue.js, Nuxt.js and Unity
+                <p>I am now a Machine Learning Engineer with over three years of industry experience. I hold a Master of Engineering in Artificial Intelligence and a Bachelor of Engineering in Information Technology from Institut Teknologi Bandung (ITB).</p>
+                <br>
+                
+                <img src="../assets/itb.png" style="width: 10%; height: auto;" alt="Institut Teknologi Bandung logo" />
+            
+                <h3>Education</h3>
+                <ul>
+                  <li><strong>Master of Engineering - MEng, Artificial Intelligence</strong> (July 2021 - September 2022)
+                    <ul>
+                      <li>Grade: GPA 3.81/4.00</li>
+                      <li>Fast-Track Program (Bachelor to Master Degree)</li>
+                      <li>GTA 100 Scholarship Awardee 2021 - 2022</li>
+                      <li>Thesis: Few-shot Learning on Indonesian Language Text Classification</li>
+                    </ul>
+                  </li>
+                  <li><strong>Bachelor of Engineering - BE, Information Technology</strong> (August 2017 - July 2021)
+                    <ul>
+                      <li>Grade: GPA 3.65/4.00</li>
+                      <li>Activities and Societies: ITB Student Orchestra</li>
+                      <li>Thesis: Development of Sentiment Analysis Model and Intent Classification of Scientific Journal Citations</li>
+                    </ul>
+                  </li>
+                </ul>
+                <br>
+                <br>
+                
+                <p>My technical skills span a broad range of programming languages, including C#, C++, Java, Python, Go, Haskell, HTML, CSS, Javascript, SQL, and NoSQL. I have experience with frameworks and technologies such as ASP.NET, Sitecore, Go-chi, Express.js, React, Vue.js, Nuxt.js, and Unity.</p>
+                
+                <p>In my recent roles, I've honed my capabilities in big data ETL, utilizing tools like Airflow, Dataflow, and Apache Beam to process data into operational ML models, including Prophet and various neural network architectures. Additionally, I have developed chatbots and batch NER systems, incorporating LLMS technologies from providers like OpenAI and Gemini to enhance our data processing and user interaction frameworks.</p>
               </div>
             </article>
+            
+            
             <article clasis-fixed-tops="message">
               <div class="message-header">
                 <p>Projects I've Worked On</p>
@@ -130,29 +151,67 @@
               </div>
             </article>
             <br />
-            <article clasis-fixed-tops="message">
+            <article class="message">
               <div class="message-header">
                 <p>Work Experience</p>
               </div>
-              <div class="message-body" style="text-align:center">
-                <h1 style="font-family: Tahoma;font-size:40px">Roketin</h1>
-                <img src="../assets/roketin.jpg" />
-                <br />
-                <h2 style="font-family: Tahoma; font-size: 22px">Intern Back-End Developer</h2>May 2019 - July 2019
-                <br />
-                <br />Handling Back-End related works (Database,
-                REST API, JWT Login) on a core
-                WebApplication for an insurance company, Developed using Golang, MongoDB
+              <div class="message-body">
+                <img src="../assets/tsel.png" style="width: 20%;" />
+                <h1 style="font-size: 40px;">Telkomsel</h1>
+                <h2 style="font-family: Tahoma; font-size: 22px;">Machine Learning Engineer Associate</h2>
+                <p style="font-size: 18px;">July 2023 - Present</p>
+                <p>Jakarta, Indonesia · Hybrid</p>
+                <ul>
+                  <li>Handles Generative AI & LLM use cases including Probing Machine, Dashboard Summarization, and OCR Invoice.</li>
+                  <li>Responsible for MLOps and LLMOps to streamline machine learning lifecycle management and operations.</li>
+                  <li>Developed a chatbot interface to facilitate user interactions and automate responses.</li>
+                </ul>
               </div>
-              <div class="message-body" style="text-align:center">
-                <h1 style="font-size:40px">Xtremax Teknologi Indonesia</h1>
-                <img src="../assets/xtremax.png" style="width:30%;" />
-                <br />
-                <h2 style="font-family: Tahoma; font-size: 22px">Part Time Back-End Developer</h2>February 2020 - November 2020
-                <br />
-                <br />Developing various CMS based webapp with ASP.NET and Sitecore MVC. Managing servers and Zookeeper instances, for Solr search function optimization with Docker.
+              <div class="message-body">
+                <img src="../assets/jobkred.png" style="width: 20%;" />
+                <h1 style="font-size: 40px;">JobKred</h1>
+                <h2 style="font-family: Tahoma; font-size: 22px;">Data Scientist</h2>
+                <p style="font-size: 18px;">May 2022 - May 2023</p>
+                <p>Singapore · Full-time</p>
+                <ul>
+                  <li>Developed and maintained a web scraping pipeline using Scrapy, Airflow, Kubernetes, and GKE.</li>
+                  <li>Engineered an ETL pipeline to process incoming web data for further analysis and insights.</li>
+                  <li>Utilized data to train GPT models for summarizing job descriptions, enhancing data utility and accessibility.</li>
+                </ul>
+              </div>
+              <div class="message-body">
+                <h2 style="font-family: Tahoma; font-size: 22px;">Software Engineer</h2>
+                <p style="font-size: 18px;">August 2021 - May 2022</p>
+                <p>Singapore · Part-time</p>
+                <ul>
+                  <li>Implemented Python and Django MVC architectures for robust web application development.</li>
+                  <li>Managed ETL processes and data pipelines using Airflow, BigQuery, and Google PubSub.</li>
+                  <li>Developed tools with Scrapy and Selenium WebDriver for efficient data scraping and automation tasks.</li>
+                </ul>
+              </div>
+              <div class="message-body">
+                <img src="../assets/roketin.jpg" style="width: 10%;" />
+                <h1 style="font-family: Tahoma; font-size: 40px;">Roketin</h1>
+                <h2 style="font-family: Tahoma; font-size: 22px;">Intern Back-End Developer</h2>
+                <p style="font-size: 18px;">May 2019 - July 2019</p>
+                <ul>
+                  <li>Managed back-end development tasks for a core web application designed for an insurance company.</li>
+                  <li>Developed functionalities involving databases, RESTful APIs, and JWT authentication.</li>
+                  <li>Utilized technologies: Golang, MongoDB.</li>
+                </ul>
+              </div>
+              <div class="message-body">
+                <img src="../assets/xtremax.png" style="width: 10%;" />
+                <h1 style="font-size: 40px;">Xtremax Teknologi Indonesia</h1>
+                <h2 style="font-family: Tahoma; font-size: 22px;">Part-Time Back-End Developer</h2>
+                <p style="font-size: 18px;">February 2020 - November 2020</p>
+                <ul>
+                  <li>Developed and maintained various CMS-based web applications using ASP.NET and Sitecore MVC.</li>
+                  <li>Handled server management and optimization of search functionalities using Solr, integrated within Docker environments.</li>
+                </ul>
               </div>
             </article>
+            
             <article clasis-fixed-tops="message">
               <div class="message-header">
                 <p>Leadership Experience</p>
