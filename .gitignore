@@ -67,6 +67,7 @@ typings/
 
 # nuxt.js build output
 .nuxt
+.playwright-cli/
 
 # Nuxt generate
 dist

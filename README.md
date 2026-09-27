@@ -1,23 +1,24 @@
-# Personal Web Portfolio at www.rayzamahendra.xyz
+# Rayza Mahendra's portfolio
 
-> Made with Nuxt JS and Vue
+A Nuxt 2 portfolio with an editorial design, current experience, projects, education, and recognition drawn from Rayza's CV.
 
-## Build Setup
+## Run locally
 
-``` bash
-# install dependencies
-set NODE_OPTIONS=--openssl-legacy-provider
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```powershell
+npm ci
+$env:NODE_OPTIONS = '--openssl-legacy-provider'
+npm run dev
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Open <http://localhost:3333>. The legacy OpenSSL flag is needed when building this Nuxt 2 project with newer Node.js versions.
+
+## Project map
+
+- `pages/index.vue`: portfolio overview
+- `pages/profile.vue`: detailed experience, projects, education, and skills
+- `data/portfolio.js`: shared CV content
+- `assets/site.css`: typography, colors, layouts, and responsive styles
+- `components/SiteHeader.vue` and `components/SiteFooter.vue`: shared navigation and contact
+- `assets/editorial-*.webp`: editorial artwork made for this portfolio
+
+The site uses self-hosted Source Serif 4 and Bodoni Moda through Fontsource. The GitHub Actions workflow generates the static site and publishes it to GitHub Pages after pushes to `master`.

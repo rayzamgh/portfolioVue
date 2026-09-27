@@ -13,53 +13,28 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   mode: 'spa',
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Rayza Mahendra | AI, Data & Engineering',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Rayza Mahendra is an AI and data governance practitioner and machine learning engineer based in Jakarta, Indonesia.'
+      },
+      { name: 'theme-color', content: '#e2dedb' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: `${process.env.DEPLOY_ENV === 'GH_PAGES' ? '/portfolioVue/' : '/'}favicon.ico` }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  loading: { color: '#c03f13' },
   css: [
+    '@fontsource/source-serif-4/300.css',
+    '@fontsource/source-serif-4/400.css',
+    '@fontsource/bodoni-moda/700.css',
+    '~/assets/site.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js dev-modules
-  */
-  devModules: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
-  /*
-  ** Build configuration
-  */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  },
   ...routerBase
 }

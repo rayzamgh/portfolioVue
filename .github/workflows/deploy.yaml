@@ -18,9 +18,11 @@ jobs:
           node-version: '20'  # You can specify your Node.js version here
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build and Generate static files
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
         run: npm run generate:gh-pages
 
       - name: Deploy to GitHub Pages
