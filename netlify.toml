@@ -1,0 +1,7 @@
+[build]
+  command = "npm run generate && node scripts/verify-static-base.js /"
+  publish = "dist"
+
+[build.environment]
+  DEPLOY_ENV = "NETLIFY"
+  NODE_OPTIONS = "--openssl-legacy-provider"

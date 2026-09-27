@@ -25,6 +25,9 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
         run: npm run generate:gh-pages
 
+      - name: Verify GitHub Pages asset paths
+        run: node scripts/verify-static-base.js /portfolioVue/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
