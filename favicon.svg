@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="rainbow">
+      <stop stop-color="#26c0ff"/>
+      <stop offset=".2" stop-color="#e600c2"/>
+      <stop offset=".4" stop-color="#ff4940"/>
+      <stop offset=".6" stop-color="#ffa130"/>
+      <stop offset=".8" stop-color="#ffc837"/>
+      <stop offset="1" stop-color="#00cc3d"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#rainbow)"/>
+</svg>
