@@ -23,17 +23,17 @@ export default {
         name: 'description',
         content: 'Rayza Mahendra is an AI and data governance practitioner and machine learning engineer based in Jakarta, Indonesia.'
       },
-      { name: 'theme-color', content: '#e2dedb' }
+      { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: `${process.env.DEPLOY_ENV === 'GH_PAGES' ? '/portfolioVue/' : '/'}favicon.ico` }
+      { rel: 'icon', type: 'image/svg+xml', href: `${process.env.DEPLOY_ENV === 'GH_PAGES' ? '/portfolioVue/' : '/'}favicon.svg` }
     ]
   },
-  loading: { color: '#c03f13' },
+  loading: { color: '#08304c' },
   css: [
-    '@fontsource/source-serif-4/300.css',
-    '@fontsource/source-serif-4/400.css',
-    '@fontsource/bodoni-moda/700.css',
+    '@fontsource-variable/manrope',
+    '@fontsource-variable/plus-jakarta-sans',
+    '@fontsource-variable/plus-jakarta-sans/wght-italic.css',
     '~/assets/site.css'
   ],
   ...routerBase

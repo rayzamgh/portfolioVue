@@ -1,115 +1,103 @@
 <template>
   <main class="home-page">
-    <section class="opening page-width" aria-labelledby="opening-title">
-      <figure class="opening__art opening__art--left">
-        <img :src="artwork.governance" alt="Ink illustration of ledgers, approvals, and connected AI systems" />
-        <figcaption>Governance for the systems we build.</figcaption>
-      </figure>
-      <div class="opening__copy">
-        <p class="section-kicker">AI · Data · Engineering</p>
-        <h1 id="opening-title">BUILDING<br />AI THAT<br />HOLDS UP.</h1>
-        <p>From machine learning delivery to company-wide AI governance.</p>
-        <nuxt-link class="text-link" to="/profile">Meet Rayza <span aria-hidden="true">↗</span></nuxt-link>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero__photos" aria-hidden="true">
+        <div class="hero__photo hero__photo--desk"><img :src="photos.workspace" alt="" /></div>
+        <div class="hero__photo hero__photo--city"><img :src="photos.jakarta" alt="" /></div>
+        <div class="hero__photo hero__photo--coast"><img :src="photos.coast" alt="" /></div>
       </div>
-      <figure class="opening__art opening__art--right">
-        <img :src="artwork.galilei" alt="Ink illustration of a reliable AI production pipeline" />
-        <figcaption>Production systems with purpose.</figcaption>
-      </figure>
-    </section>
-
-    <div class="display-banner" aria-label="Rayza Mahendra">
-      <div class="page-width display-banner__inner">
-        <span>RAYZA</span>
-        <span>MAHENDRA</span>
-      </div>
-    </div>
-
-    <section class="intro-section page-width" aria-labelledby="intro-title">
-      <div class="intro-section__bio">
-        <p><span class="drop-cap">I</span> lead AI and data governance at Telkomsel, where I work on the standards, evidence, and monitoring that help AI systems reach production responsibly.</p>
-        <p>Before this, I built machine learning products, LLMOps platforms, and data pipelines across telecom and labour-market technology.</p>
-      </div>
-      <div class="intro-section__statement">
-        <p class="section-kicker">A note from Jakarta</p>
-        <h2 id="intro-title">Curiosity in the lab. <em>Discipline</em> in the real world.</h2>
+      <div class="hero__copy">
+        <span class="eyebrow">Rayza Mahendra · Jakarta</span>
+        <h1 id="hero-title">Making AI <em>work</em><br />in the real world.</h1>
+        <p>I build machine learning products and the governance that helps them reach people responsibly.</p>
+        <div class="hero__actions">
+          <a class="rainbow-button" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
+          <nuxt-link class="text-link" to="/profile">Get to know me <span aria-hidden="true">↗</span></nuxt-link>
+        </div>
       </div>
     </section>
 
-    <section id="work" class="selected-work page-width" aria-labelledby="work-title">
+    <section class="intro page-width" aria-labelledby="intro-title">
+      <div class="intro__lead">
+        <span class="eyebrow">A little about me</span>
+        <h2 id="intro-title">The builder and the <i>big-picture thinker.</i></h2>
+      </div>
+      <div class="intro__details">
+        <p>I'm Rayza, an AI and data governance practitioner at Telkomsel. My path started in software engineering and machine learning, then grew into helping teams put AI into production with care.</p>
+        <div class="intro__facts">
+          <div><strong>200+</strong><span>AI initiatives in the registry I govern</span></div>
+          <div><strong>20+</strong><span>AI use cases brought toward production with Galilei</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work page-width" aria-labelledby="work-title">
       <div class="section-heading">
-        <p class="section-kicker">Selected work</p>
-        <h2 id="work-title">IDEAS, PUT TO WORK.</h2>
-        <p>Platforms and products spanning AI operations, public insight, and everyday experiences.</p>
+        <span class="eyebrow">Selected work</span>
+        <h2 id="work-title">Some things I've helped <i>make real.</i></h2>
+        <p>Platforms, products, and practical systems built with teams across AI, data, and engineering.</p>
       </div>
-      <div class="project-grid">
+      <div class="project-wall">
         <article v-for="project in featuredProjects" :key="project.title" class="project-card">
           <div class="project-card__image">
-            <img :src="artwork[project.image]" :alt="project.title + ' editorial illustration'" />
+            <img :src="photos[project.image]" :alt="photoAlt[project.image]" loading="lazy" />
           </div>
-          <div class="project-card__heading">
+          <div class="project-card__content">
+            <div class="project-card__meta">
+              <span class="chip" :class="'chip--' + project.image">{{ project.category }}</span>
+              <span>{{ project.year }}</span>
+            </div>
             <h3>{{ project.title }}</h3>
-            <span class="project-card__badge">SELECTED</span>
+            <p>{{ project.description }}</p>
           </div>
-          <p>{{ project.description }}</p>
-          <div class="project-card__meta">{{ project.category }} <span aria-hidden="true">·</span> {{ project.year }}</div>
         </article>
       </div>
-      <nuxt-link class="text-link selected-work__more" to="/profile#projects">Explore more work <span aria-hidden="true">↗</span></nuxt-link>
+      <nuxt-link class="text-link work__more" to="/profile#projects">See more projects <span aria-hidden="true">↗</span></nuxt-link>
     </section>
 
-    <section class="career-section page-width" aria-labelledby="career-title">
-      <div class="career-section__lead">
-        <p class="section-kicker">Where I work now</p>
-        <h2 id="career-title">FROM BUILDING MODELS TO GUIDING THEIR IMPACT.</h2>
-      </div>
-      <div class="career-section__content">
-        <div class="career-section__current">
-          <p class="career-section__period">{{ experience[0].period }}</p>
-          <h3>{{ experience[0].role }}</h3>
-          <p class="career-section__company">{{ experience[0].company }}</p>
-          <p>{{ experience[0].summary }} The company-wide AI registry now tracks more than 200 initiatives.</p>
-        </div>
-        <div class="career-section__previous">
-          <div v-for="role in experience.slice(1, 3)" :key="role.role">
-            <span>{{ role.period }}</span>
-            <h4>{{ role.role }}</h4>
-            <p>{{ role.company }}</p>
-          </div>
-        </div>
-        <nuxt-link class="text-link" to="/profile#experience">Read the full experience <span aria-hidden="true">↗</span></nuxt-link>
-      </div>
-    </section>
-
-    <div class="statement-banner" aria-hidden="true">
-      <div class="page-width">THOUGHTFUL SYSTEMS. REAL-WORLD IMPACT.</div>
-    </div>
-
-    <section class="recognition-section page-width" aria-labelledby="recognition-title">
+    <section class="path page-width" aria-labelledby="path-title">
       <div class="section-heading">
-        <p class="section-kicker">Recognition</p>
-        <h2 id="recognition-title">A FEW MILESTONES.</h2>
+        <span class="eyebrow">The journey</span>
+        <h2 id="path-title">From code to <i>consequence.</i></h2>
+        <p>Each role has made me more curious about how good systems are built, shipped, and cared for.</p>
       </div>
-      <div class="recognition-grid">
-        <article v-for="item in recognition" :key="item.name">
-          <span class="recognition-grid__year">{{ item.year }}</span>
-          <h3>{{ item.name }}</h3>
-          <p class="recognition-grid__context">{{ item.context }}</p>
-          <p>{{ item.contribution }}</p>
+      <div class="path__grid">
+        <article class="path__current">
+          <span class="chip chip--governance">Now at Telkomsel</span>
+          <span class="path__period">{{ experience[0].period }}</span>
+          <h3>{{ experience[0].role }}</h3>
+          <p>{{ experience[0].summary }}</p>
+          <nuxt-link class="text-link" to="/profile#experience">Read the full story <span aria-hidden="true">↗</span></nuxt-link>
         </article>
+        <div class="path__previous">
+          <article v-for="role in experience.slice(1, 3)" :key="role.role">
+            <span>{{ role.period }}</span>
+            <h3>{{ role.role }}</h3>
+            <p>{{ role.company }}</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="education-section page-width" aria-labelledby="education-title">
-      <div>
-        <p class="section-kicker">Foundation</p>
-        <h2 id="education-title">STILL LEARNING.<br />ALWAYS BUILDING.</h2>
+    <section class="milestones page-width" aria-labelledby="milestones-title">
+      <div class="section-heading">
+        <span class="eyebrow">Along the way</span>
+        <h2 id="milestones-title">A few things worth <i>remembering.</i></h2>
       </div>
-      <div class="education-section__degrees">
-        <article v-for="item in education" :key="item.degree">
-          <span>{{ item.period }}</span>
-          <h3>{{ item.degree }}</h3>
-          <p>{{ item.school }}</p>
+      <div class="milestones__grid">
+        <article v-for="item in recognition" :key="item.name" class="milestone-card">
+          <span class="milestone-card__year">{{ item.year }}</span>
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.context }}</p>
+          <small>{{ item.contribution }}</small>
         </article>
+      </div>
+      <div class="education-note">
+        <div>
+          <span class="eyebrow">The foundation</span>
+          <h3>Curiosity took me to ITB.</h3>
+        </div>
+        <p>I earned bachelor's and master's degrees in Informatics and Artificial Intelligence at Institut Teknologi Bandung.</p>
         <nuxt-link class="text-link" to="/profile#education">Education and skills <span aria-hidden="true">↗</span></nuxt-link>
       </div>
     </section>
@@ -117,29 +105,34 @@
 </template>
 
 <script>
-import governanceArtwork from '~/assets/editorial-governance.webp';
-import galileiArtwork from '~/assets/editorial-llmops.webp';
-import ecoflowArtwork from '~/assets/editorial-ecoflow.webp';
-import { featuredProjects, experience, recognition, education } from '~/data/portfolio';
+import workspacePhoto from '~/assets/portrait-workspace.webp';
+import jakartaPhoto from '~/assets/portrait-jakarta.webp';
+import coastPhoto from '~/assets/portrait-coast.webp';
+import { featuredProjects, experience, recognition } from '~/data/portfolio';
 
 export default {
   data() {
     return {
-      artwork: {
-        governance: governanceArtwork,
-        galilei: galileiArtwork,
-        ecoflow: ecoflowArtwork
+      photos: {
+        workspace: workspacePhoto,
+        jakarta: jakartaPhoto,
+        coast: coastPhoto,
+        galilei: workspacePhoto,
+        governance: jakartaPhoto,
+        ecoflow: coastPhoto
+      },
+      photoAlt: {
+        galilei: 'Sunlit notebook and laptop on a work desk',
+        governance: 'Tree-lined city street in the late afternoon',
+        ecoflow: 'Green coastline and footpath'
       },
       featuredProjects,
       experience,
-      recognition,
-      education
+      recognition
     };
   },
   head() {
-    return {
-      title: 'Rayza Mahendra | AI, Data & Engineering'
-    };
+    return { title: 'Rayza Mahendra | AI, Data & Engineering' };
   }
 };
 </script>
