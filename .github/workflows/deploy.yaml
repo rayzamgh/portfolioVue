@@ -25,7 +25,7 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
         run: npm run generate:gh-pages
 
-      - name: Verify GitHub Pages asset paths
+      - name: Verify static asset paths and Netlify rewrite
         run: node scripts/verify-static-base.js /portfolioVue/
 
       - name: Deploy to GitHub Pages

@@ -32,4 +32,15 @@ for (const url of scripts) {
   }
 }
 
+if (expectedBase === '/portfolioVue/') {
+  const redirectsPath = path.join(dist, '_redirects')
+  const redirects = fs.existsSync(redirectsPath)
+    ? fs.readFileSync(redirectsPath, 'utf8')
+    : ''
+
+  if (!/^\/portfolioVue\/\*\s+\/:splat\s+200\s*$/m.test(redirects)) {
+    throw new Error('Missing Netlify rewrite for /portfolioVue/* assets')
+  }
+}
+
 console.log(`Verified ${scripts.length} scripts with base ${expectedBase}`)
